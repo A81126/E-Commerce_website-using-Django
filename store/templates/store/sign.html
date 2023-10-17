@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+
+{% load static %}
+<html>
+<head>
+    <title>Signup</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #f4f4f4;
+        }
+        .welcome {
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            align-items: center;
+            text-transform: capitalize;
+            font-weight: 100px;
+            color:#333;
+            text-align: center;
+        }
+
+
+        .container {
+            width: 65%;
+            margin-top: 100px;
+            margin-left:15%;
+
+            padding: 20px;
+            background: #fff;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            position: fixed;
+            
+        }
+
+        .form-group {
+            margin: 10px 0;
+        }
+
+        .form-group label {
+            display: block;
+            font-weight: bold;
+
+        }
+
+        .form-group input {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin-top: 10px;
+        }
+
+        .form-group input[type="submit"] {
+            background: #333;
+            color: #fff;
+            cursor: pointer;
+        }
+
+        .form-group input[type="submit"]:hover {
+            background: #444;
+        }
+        .sing{
+            text-align: right;
+            text-decoration: none;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+           font-size: 20px;
+           color:#fff;
+           
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="welcome">Welcome to ecommerce website!</h1>
+        <h2>Login</h2>
+        <form id="loginForm">
+            <div class="form-group">
+                <label for="username">Username:</label>
+                <input type="text" id="username" name="username" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Confirm Password:</label>
+                <input type="password" id="password" name="password" required>
+            </div>
+            
+        </form>
+        
+
+    <script>
+        document.getElementById("loginForm").addEventListener("submit", function(event) {
+            event.preventDefault();
+            const username = document.getElementById("username").value;
+            const password = document.getElementById("password").value;
+
+            // You can add your authentication logic here.
+            // For this example, we'll just display a message.
+            if (username === "yourusername" && password === "yourpassword") {
+                alert("Login successful!");
+            } else {
+                alert("Login failed. Please check your credentials.");
+            }
+        });
+    </script>
+</body>
+</html>
